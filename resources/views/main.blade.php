@@ -10,9 +10,9 @@
 </head>
 <body>
         <div class="container store-container">
-            <div class="store-form">
-                <form action="" method="post">
-                    <input type="text">
+            <div class="store-form-wrapper">
+                <form action="" method="post" class="store-form">
+                    <input type="text" class="store-form__search">
                     <button type="submit">search</button>
                 </form>
             </div>
@@ -20,14 +20,19 @@
                 <ul class="product-list">
                     @foreach($productCollection as $elem)
                         <li class="product-item">
-                            <div class="product-name">{{$elem->name}}</div>
+
                             <div class="product-image">
-                                <img src="#" alt="#" class="product-image-item">
-                                {{$elem->image}}
+                                <img src="images/free-icon-gear-7174887.png" alt="{{$elem->image}}" class="product-image-item">
+{{--                                {{$elem->image}}--}}
+
                             </div>
-                            <div class="product-description">{{$elem->description}}</div>
-                            <div class="product-count">Осталось товара: {{$elem->count}}</div>
-                            <div class="product-price">Цена: {{$elem->price}}</div>
+                            <div class="product-item__text">
+{{--                                <div class="product-name">{{$elem->name}}</div>--}}
+                                <div class="product-price">от: {{$elem->price}}</div>
+                                <div class="product-description">{{$elem->description}}</div>
+                                <div class="product-count">Осталось товара: {{$elem->count}}</div>
+
+                            </div>
                         </li>
                     @endforeach
                 </ul>
