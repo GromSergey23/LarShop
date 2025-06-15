@@ -10,7 +10,6 @@ use Illuminate\Http\Request;
 class ServicesStore extends Controller
 {
     public function index(): Collection
-
     {
         return Product::all();
     }

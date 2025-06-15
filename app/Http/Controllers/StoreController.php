@@ -17,6 +17,7 @@ class StoreController extends Controller
     public function index(): View
     {
         $products = $this->servicesStore->index()->take(10);
+
         return view('main',[
             'productCollection' => $products,
         ]);
