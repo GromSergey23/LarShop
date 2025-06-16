@@ -22,4 +22,9 @@ class StoreController extends Controller
             'productCollection' => $products,
         ]);
     }
+
+    public function search(Request $request): View
+    {
+        $products = $this->servicesStore->search($request)->index();
+    }
 }

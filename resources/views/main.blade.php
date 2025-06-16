@@ -12,7 +12,7 @@
         <div class="container store-container">
             <div class="store-form-wrapper">
                 <form action="" method="post" class="store-form">
-                    <input type="text" class="store-form__search">
+                    <input type="text" class="store-form__search" name="search">
                     <button type="submit">search</button>
                 </form>
             </div>

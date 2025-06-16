@@ -13,4 +13,10 @@ class ServicesStore extends Controller
     {
         return Product::all();
     }
+
+    public function search(Request $request): Collection
+    {
+        return Product::startWith()
+    }
+
 }
