@@ -11,7 +11,7 @@
 <body>
         <div class="container store-container">
             <div class="store-form-wrapper">
-                <form action="" method="post" class="store-form">
+                <form action="/search" method="get" class="store-form">
                     <input type="text" class="store-form__search" name="search">
                     <button type="submit">search</button>
                 </form>
@@ -27,7 +27,7 @@
 
                             </div>
                             <div class="product-item__text">
-{{--                                <div class="product-name">{{$elem->name}}</div>--}}
+                                <div class="product-name">{{$elem->name}}</div>
                                 <div class="product-price">от: {{$elem->price}}</div>
                                 <div class="product-description">{{$elem->description}}</div>
                                 <div class="product-count">Осталось товара: {{$elem->count}}</div>
