@@ -26,7 +26,6 @@ class StoreController extends Controller
 
     public function search(Request $request): View
     {
-
         $products = $this->servicesStore->search($request->get('search'));
 
         return view('main',[

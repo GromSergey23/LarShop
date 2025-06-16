@@ -19,8 +19,7 @@ class ServicesStore extends Controller
     public function search($search): Collection
     {
 
-        return Product::all()
-            ->where(fn($data) => Str::startsWith(Str::lower($data->name), Str::lower($search)));
+        return Product::all()->where(fn($data) => Str::startsWith(Str::lower($data->name), Str::lower($search)));
     }
 
 
