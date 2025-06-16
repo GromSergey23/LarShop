@@ -32,4 +32,13 @@ class StoreController extends Controller
             'productCollection' => $products,
         ]);
     }
+
+    public function sort(Request $request): View
+    {
+        $products = $this->servicesStore->sort($request)->all();
+
+        return view('main',[
+            'productCollection' => $products,
+        ]);
+    }
 }
