@@ -21,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('add_collection_product');
+        Schema::table('products', function (Blueprint $table){
+            $table->dropColumn('collection_type');
+        });
     }
 };

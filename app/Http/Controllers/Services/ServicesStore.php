@@ -28,21 +28,13 @@ class ServicesStore extends Controller
         $direction = $request->get('direction');
         switch (Route::currentRouteName()) {
             case 'sort.category':
-
                 return Product::all()->sortBy(fn($product) => $product->collection_type);
-
             case 'sort.alfa':
-
                 return Product::orderBy('name', $direction)->get();
-
             case 'sort.count':
-
                 return Product::orderBy('count', $direction)->get();
-
             case 'sort.price':
-
                 return Product::orderBy('price', $direction)->get();
-
             default:
                 break;
         }
