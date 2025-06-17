@@ -1,5 +1,5 @@
-@import 'tailwindcss';
 @import './index.css';
+@import 'tailwindcss';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -18,4 +18,8 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+}
+
+ul{
+    padding: 0;
 }

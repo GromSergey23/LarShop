@@ -14,21 +14,21 @@
             <div class="store-form-wrapper">
                 <form action="/search" method="get" class="store-form">
                     <input type="text" class="store-form__search" name="search">
-                    <button type="submit">search</button>
+{{--                    <button type="submit">search</button>--}}
                 </form>
+            </div>
+            <div class="product-wrapper">
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Сортировать
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{route('sort.category')}}">по категории</a></li>
-                        <li><a class="dropdown-item" href="{{route('sort.alfa', ['direction' => request('direction') == 'asc' ? 'desc' : 'asc'])}}">в алфавитном порядке</a></li>
-                        <li><a class="dropdown-item" href="{{route('sort.count', ['direction' => request('direction') == 'asc' ? 'desc' : 'asc'])}}">по количеству</a></li>
-                        <li><a class="dropdown-item" href="{{route('sort.price', ['direction' => request('direction') == 'asc' ? 'desc' : 'asc'])}}">по цене</a></li>
+                        <li><a class="dropdown-item" href="{{route('sort', ['type' => 'cat'])}}">по категории</a></li>
+                        <li><a class="dropdown-item" href="{{route('sort', ['type' => 'alfa', 'direction' => request('direction') == 'asc' ? 'desc' : 'asc'])}}">в алфавитном порядке</a></li>
+                        <li><a class="dropdown-item" href="{{route('sort', ['type' => 'count', 'direction' => request('direction') == 'asc' ? 'desc' : 'asc'])}}">по количеству</a></li>
+                        <li><a class="dropdown-item" href="{{route('sort', ['type' => 'price', 'direction' => request('direction') == 'asc' ? 'desc' : 'asc'])}}">по цене</a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="product-wrapper">
                 <ul class="product-list">
                     @foreach($productCollection as $elem)
                         <li class="product-item">
@@ -49,6 +49,11 @@
                         </li>
                     @endforeach
                 </ul>
+            </div>
+
+            <div class="mt-4 ">
+
+                {{ $productCollection->links()}}
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

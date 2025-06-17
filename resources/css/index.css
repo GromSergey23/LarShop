@@ -7,30 +7,41 @@
     width: 800px;
     margin: 50px auto 40px;
     padding: 20px 20px;
-    display: flex;
-    justify-content: center;
+    /*display: flex;*/
+    /*justify-content: center;*/
 }
 
 .store-form{
+    margin: auto;
     width: 600px;
     font-size: 30px;
 
 }
 
 .store-form__search{
+    display: block;
+    margin: auto;
     border: 1px solid lightslategrey;
-    margin-right: 20px;
     font-weight: normal;
 }
 
+.dropdown{
+    display: flex;
+    justify-content: start;
+    margin-bottom: 20px;
+}
 
 .product-list{
     display: grid;
     box-sizing: content-box;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(5,1fr);
     place-items: center;
     gap: 10px;
     align-items: stretch;
+}
+
+.product-list ul{
+    padding: 0;
 }
 
 .product-item{
@@ -77,4 +88,10 @@
     overflow: hidden;
 }
 
+.mt-4 nav
+{
+    width: fit-content;
+    display: block;
+    margin: 60px auto 0px;
 
+}

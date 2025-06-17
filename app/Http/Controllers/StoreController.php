@@ -17,7 +17,7 @@ class StoreController extends Controller
 
     public function index(): View
     {
-        $products = $this->servicesStore->index()->take(20);
+        $products = $this->servicesStore->index();
 
         return view('main',[
             'productCollection' => $products,
@@ -35,7 +35,7 @@ class StoreController extends Controller
 
     public function sort(Request $request): View
     {
-        $products = $this->servicesStore->sort($request)->all();
+        $products = $this->servicesStore->sort($request);
 
         return view('main',[
             'productCollection' => $products,

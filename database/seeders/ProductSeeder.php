@@ -16,7 +16,7 @@ class ProductSeeder extends Seeder
     {
         $categoryOfProducts = ['home', 'work', 'study'];
         Product::factory()
-            ->count(30)
+            ->count(300)
             ->state(function () use ($categoryOfProducts) {
 
                 return [
