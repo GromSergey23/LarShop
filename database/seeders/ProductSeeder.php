@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Product;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Eloquent\Factories\Sequence;
 use Illuminate\Database\Seeder;
 
 class ProductSeeder extends Seeder
@@ -13,7 +14,15 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        Product::factory()->count(30)->create();
-    }
+        $categoryOfProducts = ['home', 'work', 'study'];
+        Product::factory()
+            ->count(300)
+            ->state(function () use ($categoryOfProducts) {
 
+                return [
+                    'collection_type' => fake()->randomElement($categoryOfProducts),
+                ];
+            })
+            ->create();
+    }
 }
