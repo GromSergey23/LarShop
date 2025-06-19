@@ -54,8 +54,8 @@
             </div>
 
             <div class="mt-4 ">
-
-                {{ $productCollection->links()}}
+{{--                {{ $productCollection->links()}}--}}
+                {{ $productCollection->links('pagination::bootstrap-5') }}
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

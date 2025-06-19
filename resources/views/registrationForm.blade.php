@@ -14,7 +14,7 @@
 <body>
     <div class="container">
     <div class="row main-form">
-        <form class="" method="post" action="/registration/create">
+        <form class="register-form" method="post" action="/registration/create">
             @csrf
             <div class="form-group">
                 <label for="name" class="cols-sm-2 control-label">Your Name</label>

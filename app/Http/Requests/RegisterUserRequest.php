@@ -26,7 +26,7 @@ class RegisterUserRequest extends FormRequest
 //        dd($request->all());
         return [
             'reg_name' => 'required|string|max:255',
-            'reg_login' => 'required|string|max:255',
+            'reg_login' => 'required|string|max:255|unique:users,login',
             'reg_email' => 'required|string|email|max:255|unique:users,email',
             'reg_password' => 'required|string|min:4|same:reg_confirm_password',
         ];

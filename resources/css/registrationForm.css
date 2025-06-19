@@ -5,8 +5,8 @@
 label{
     margin-bottom: 15px;
 }
-input,
-input::-webkit-input-placeholder {
+.form-register input,
+                input::-webkit-input-placeholder {
     font-size: 11px;
     padding-top: 3px;
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\Services\ServicesRegistration;
 use App\Http\Requests\RegisterUserRequest;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use SebastianBergmann\Type\VoidType;
 
 class AuthController extends Controller
 {
@@ -25,7 +26,7 @@ class AuthController extends Controller
         return view('registrationForm');
     }
 
-    public function registrationNewUser(RegisterUserRequest $registerUserRequest)
+    public function registrationNewUser(RegisterUserRequest $registerUserRequest): Void
     {
         $this->registration->register($registerUserRequest);
     }

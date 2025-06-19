@@ -35,7 +35,7 @@ class ServicesStore extends Controller
             case 'price':
                 return Product::orderBy('price', $direction)->paginate(10);
             default:
-                break;
+                return Product::paginate(10);
         }
     }
 }
