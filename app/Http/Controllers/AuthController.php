@@ -26,7 +26,7 @@ class AuthController extends Controller
         return view('registrationForm');
     }
 
-    public function registrationNewUser(RegisterUserRequest $registerUserRequest): Void
+    public function registrationNewUser(RegisterUserRequest $registerUserRequest): void
     {
         $this->registration->register($registerUserRequest);
     }
